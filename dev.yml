@@ -2,4 +2,16 @@ trigger:
   branches:
     include:
       - 'release/dev'
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: DeployDev
+  displayName: 'Deploy to Dev'
+  condition: succeeded()
+  steps:
+  - script: echo 'Deploying to Dev...'
+    displayName: 'Deployment Step'
+
+
 
