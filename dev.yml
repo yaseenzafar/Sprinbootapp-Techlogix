@@ -9,9 +9,8 @@ jobs:
 - job: DeployDev
   displayName: 'Deploy to Dev'
   condition: succeeded()
+  strategy:
+    maxParallel: 1  # Set the maximum parallelism to 1
   steps:
   - script: echo 'Deploying to Dev...'
     displayName: 'Deployment Steps'
-
-
-
