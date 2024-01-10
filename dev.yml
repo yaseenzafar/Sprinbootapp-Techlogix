@@ -11,7 +11,7 @@ jobs:
   condition: succeeded()
   steps:
   - script: echo 'Deploying to Dev...'
-    displayName: 'Deployment Step'
+    displayName: 'Deployment Steps'
 
 
 
