@@ -4,6 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:14
+  runner-test:
+    docker:
+      - image: circleci/node:14
 
     steps:
       - checkout
