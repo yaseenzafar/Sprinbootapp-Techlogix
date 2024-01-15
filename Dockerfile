@@ -6,6 +6,7 @@ COPY . /app
 RUN mvn dependency:go-offline
 
 
+
 # Build the application
 RUN mvn clean package
 
