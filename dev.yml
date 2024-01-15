@@ -6,6 +6,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
+- job: BuildDockerImage
+  displayName: 'Build Docker Image'
+  steps:
+  - script: |
+      echo 'Building Docker image...'
+      docker build -t testapp .
+    displayName: 'Build Docker Image'
+
 - job: DeployDev
   displayName: 'Deploy to Dev'
   condition: succeeded()
